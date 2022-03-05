@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     //    No logs    true
 
     // Hard code VPN configurations
-    let tunnelBundleId = "com.WhiteHax.DemoiOS.DataFilter"
+    let tunnelBundleId = "com.demo.DemoiOS.DataFilter"
     let serverAddress = "doh.in.ahadns.net"
     let serverPort = "443"
     let mtu = "1400"
