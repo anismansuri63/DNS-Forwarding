@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lih-6K-0eu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="u7z-TO-VTk">
+            <objects>
+                <viewController id="lih-6K-0eu" customClass="ViewController" customModule="DemoPT" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Oyz-et-Jfe"/>
+                        <viewControllerLayoutGuide type="bottom" id="pGX-Lg-XOy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iBc-fE-5kV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cPC-mD-3or">
+                                <rect key="frame" x="177.5" y="433" width="59" height="30"/>
+                                <state key="normal" title="Connect"/>
+                                <connections>
+                                    <action selector="go:forEvent:" destination="lih-6K-0eu" eventType="touchUpInside" id="ZCn-1S-9e6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tou-xi-hTz"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cPC-mD-3or" firstAttribute="centerX" secondItem="iBc-fE-5kV" secondAttribute="centerX" id="1gz-Je-4Cx"/>
+                            <constraint firstItem="cPC-mD-3or" firstAttribute="centerY" secondItem="iBc-fE-5kV" secondAttribute="centerY" id="eVy-AM-E9E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="connectButton" destination="cPC-mD-3or" id="rQi-FG-61a"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kfc-bs-k37" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="22" y="119"/>
+        </scene>
+    </scenes>
+</document>
