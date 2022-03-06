@@ -2,14 +2,14 @@
 //  PacketTunnelProvider.swift
 //  TunnelPacket
 //
-//  Created by Apple on 01/03/22.
+//  Created by Anis Mansuri on 01/03/22.
 //
 
 import NetworkExtension
 class PacketTunnelProvider: NEPacketTunnelProvider {
     var session: NWUDPSession? = nil
     var conf = [String: AnyObject]()
-
+    
     // These 2 are core methods for VPN tunnelling
     //   - read from tun device, encrypt, write to UDP fd
     //   - read from UDP fd, decrypt, write to tun device
@@ -48,18 +48,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
 
     func setupPacketTunnelNetworkSettings() {
         NSLog("anis- setupPacketTunnelNetworkSettings")
-        let tunnelNetworkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: self.protocolConfiguration.serverAddress!)
-        tunnelNetworkSettings.ipv4Settings = NEIPv4Settings(addresses: [conf["ip"] as! String], subnetMasks: [conf["subnet"] as! String])
-        
-        // Refers to NEIPv4Settings#includedRoutes or NEIPv4Settings#excludedRoutes,
-        // which can be used as basic whitelist/blacklist routing.
-        // This is default routing.
-        tunnelNetworkSettings.ipv4Settings?.includedRoutes = [NEIPv4Route.default()]
-
-        tunnelNetworkSettings.ipv6Settings = NEIPv6Settings(addresses: [conf["ip"] as! String], networkPrefixLengths: [128])
-        tunnelNetworkSettings.ipv6Settings?.includedRoutes = [NEIPv6Route.default()]
-        //tunnelNetworkSettings.mtu = Int(conf["mtu"] as! String) as NSNumber?
-
+        let tunnelNetworkSettings = NEPacketTunnelNetworkSettings(tunnelRemoteAddress: conf["server"] as! String)
         let dnsSettings = NEDNSSettings(servers: (conf["dns"] as! String).components(separatedBy: ","))
         // This overrides system DNS settings
         dnsSettings.matchDomains = [""]
@@ -91,8 +80,7 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
             self.setupPacketTunnelNetworkSettings()
         }
     }
-
-    override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
+    open override func startTunnel(options: [String : NSObject]?, completionHandler: @escaping (Error?) -> Void) {
         NSLog("anis- startTunnel")
         NSLog("anis- \(options)")
         conf = (self.protocolConfiguration as! NETunnelProviderProtocol).providerConfiguration! as [String : AnyObject]
@@ -101,12 +89,12 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         self.tunToUDP()
     }
 
-    override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
+    open override func stopTunnel(with reason: NEProviderStopReason, completionHandler: @escaping () -> Void) {
         session?.cancel()
         super.stopTunnel(with: reason, completionHandler: completionHandler)
     }
 
-    override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
+    open override func handleAppMessage(_ messageData: Data, completionHandler: ((Data?) -> Void)? = nil) {
         NSLog("anis- handleAppMessage")
         NSLog("anis- \(messageData)")
         if let handler = completionHandler {
@@ -114,10 +102,10 @@ class PacketTunnelProvider: NEPacketTunnelProvider {
         }
     }
 
-    override func sleep(completionHandler: @escaping () -> Void) {
+    open override func sleep(completionHandler: @escaping () -> Void) {
         completionHandler()
     }
 
-    override func wake() {
+    open override func wake() {
     }
 }

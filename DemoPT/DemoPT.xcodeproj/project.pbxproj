@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1803794127D4E61C0086BA1D /* FamilyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1815F34C27D3629A00FE190E /* FamilyManger.swift */; };
 		181672D727CDF1B700D4CCE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672D627CDF1B700D4CCE1 /* AppDelegate.swift */; };
 		181672D927CDF1B700D4CCE1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672D827CDF1B700D4CCE1 /* SceneDelegate.swift */; };
 		181672DB27CDF1B700D4CCE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672DA27CDF1B700D4CCE1 /* ViewController.swift */; };
@@ -17,7 +18,6 @@
 		181672F327CDF1EC00D4CCE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181672EC27CDF1CB00D4CCE1 /* NetworkExtension.framework */; };
 		181672F627CDF1EC00D4CCE1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672F527CDF1EC00D4CCE1 /* PacketTunnelProvider.swift */; };
 		181672FB27CDF1EC00D4CCE1 /* TunnelPacket.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 181672F227CDF1EB00D4CCE1 /* TunnelPacket.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		1818364827CFBAAC00A21E86 /* TLDList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1818364727CFBAAC00A21E86 /* TLDList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +31,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		1815F34B27D3610B00FE190E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		181672FF27CDF1EC00D4CCE1 /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1815F34C27D3629A00FE190E /* FamilyManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FamilyManger.swift; sourceTree = "<group>"; };
 		181672D327CDF1B700D4CCE1 /* DemoPT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DemoPT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		181672D627CDF1B700D4CCE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		181672D827CDF1B700D4CCE1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +70,6 @@
 		181672F527CDF1EC00D4CCE1 /* PacketTunnelProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PacketTunnelProvider.swift; sourceTree = "<group>"; };
 		181672F727CDF1EC00D4CCE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		181672F827CDF1EC00D4CCE1 /* TunnelPacket.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TunnelPacket.entitlements; sourceTree = "<group>"; };
-		1818364727CFBAAC00A21E86 /* TLDList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TLDList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,7 +114,7 @@
 		181672D527CDF1B700D4CCE1 /* DemoPT */ = {
 			isa = PBXGroup;
 			children = (
-				1818364727CFBAAC00A21E86 /* TLDList.swift */,
+				1815F34C27D3629A00FE190E /* FamilyManger.swift */,
 				181672EA27CDF1CB00D4CCE1 /* DemoPT.entitlements */,
 				181672D627CDF1B700D4CCE1 /* AppDelegate.swift */,
 				181672D827CDF1B700D4CCE1 /* SceneDelegate.swift */,
@@ -146,6 +156,7 @@
 				181672D027CDF1B700D4CCE1 /* Frameworks */,
 				181672D127CDF1B700D4CCE1 /* Resources */,
 				181672FF27CDF1EC00D4CCE1 /* Embed App Extensions */,
+				1815F34B27D3610B00FE190E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -237,8 +248,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				181672DB27CDF1B700D4CCE1 /* ViewController.swift in Sources */,
+				1803794127D4E61C0086BA1D /* FamilyManger.swift in Sources */,
 				181672D727CDF1B700D4CCE1 /* AppDelegate.swift in Sources */,
-				1818364827CFBAAC00A21E86 /* TLDList.swift in Sources */,
 				181672D927CDF1B700D4CCE1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -420,7 +431,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -452,7 +463,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -479,7 +490,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS.DataFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS.DataFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
 				SKIP_INSTALL = YES;
@@ -507,7 +518,7 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS.DataFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS.DataFilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
 				SKIP_INSTALL = YES;
