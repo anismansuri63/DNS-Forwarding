@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         setup()
     }
     func setup() {
-        FamilyManger.shared.establishConnection(extensionBundleID: "com.demo.DemoiOS.DataFilter")
+        FamilyManger.shared.establishConnection(extensionBundleID: "com.WhiteHax.DemoiOS.TunnelPacket")
         FamilyManger.shared.vPNConnectionStatusHandler = { [weak self] in
             self?.vPNStatusDidChange()
         }

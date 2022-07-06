@@ -17,7 +17,7 @@
 		181672ED27CDF1CB00D4CCE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181672EC27CDF1CB00D4CCE1 /* NetworkExtension.framework */; };
 		181672F327CDF1EC00D4CCE1 /* NetworkExtension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 181672EC27CDF1CB00D4CCE1 /* NetworkExtension.framework */; };
 		181672F627CDF1EC00D4CCE1 /* PacketTunnelProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181672F527CDF1EC00D4CCE1 /* PacketTunnelProvider.swift */; };
-		181672FB27CDF1EC00D4CCE1 /* TunnelPacket.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 181672F227CDF1EB00D4CCE1 /* TunnelPacket.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		181672FB27CDF1EC00D4CCE1 /* TunnelPacket.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 181672F227CDF1EB00D4CCE1 /* TunnelPacket.appex */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -267,6 +267,7 @@
 /* Begin PBXTargetDependency section */
 		181672FA27CDF1EC00D4CCE1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
+			platformFilter = ios;
 			target = 181672F127CDF1EB00D4CCE1 /* TunnelPacket */;
 			targetProxy = 181672F927CDF1EC00D4CCE1 /* PBXContainerItemProxy */;
 		};
@@ -415,10 +416,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoPT/DemoPT.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNRNLYYK3W;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -431,9 +433,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -447,10 +451,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DemoPT/DemoPT.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNRNLYYK3W;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = DemoPT/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -463,9 +468,11 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -476,10 +483,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TunnelPacket/TunnelPacket.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNRNLYYK3W;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TunnelPacket/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TunnelPacket;
@@ -490,10 +498,12 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS.DataFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS.TunnelPacket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -504,10 +514,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TunnelPacket/TunnelPacket.entitlements;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WNRNLYYK3W;
+				DEVELOPMENT_TEAM = GU6TNC55T8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TunnelPacket/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = TunnelPacket;
@@ -518,10 +529,12 @@
 					"@executable_path/../../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.your.DemoiOS.DataFilter;
+				PRODUCT_BUNDLE_IDENTIFIER = com.WhiteHax.DemoiOS.TunnelPacket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "App Testing Common";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
